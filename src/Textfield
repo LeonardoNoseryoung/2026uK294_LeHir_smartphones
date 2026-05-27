@@ -1,0 +1,24 @@
+import { inputAdornmentClasses, TextField } from "@mui/material"
+import { useState } from "react";
+
+function () {
+ 
+  const [input, setInput] = useState<string>("startWert");
+
+  
+  function handleChange(event){
+    console.log(event.target.value);
+    setInput(event.target.value);
+  }
+  name = input;
+ 
+
+  return (
+    <>
+    <div>Name: {name}</div>
+    <TextField onChange={handleChange}  label="Filled" variant="filled"/>
+    </>
+  )
+}
+
+export default NameTypeIn
